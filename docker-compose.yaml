@@ -1,0 +1,23 @@
+#  docker compose version
+version: "3.8"
+services:
+  # your folder
+  app:
+    # IMAGE FILE
+    build: ./client/
+    container_name: app_test
+    ports:
+      - '4000:4000'
+    # volumes:
+    #   - ./client:/app
+    #   - ./app_nodemodules
+  react:
+    build: ./front_end
+    container_name: react
+    ports:
+      - '3001:3000'
+    tty: true
+    stdin_open: true
+      
+      
+

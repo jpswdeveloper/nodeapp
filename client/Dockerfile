@@ -6,12 +6,14 @@
 
 FROM node:21-alpine
 WORKDIR  /app
-# copy all files to working /app
-Copy . .
-# Install packages
+#  copy package json .
+COPY ./package.json .
 RUN npm install 
+# copy all files to working /app
+COPY  . .
+# Install packages
 # Expose container port make it public to localmachine
-Expose 4000
+EXPOSE 4000
 # Run command
-CMD ['node','app/index.js']
+CMD ["npm","start"] 
 
