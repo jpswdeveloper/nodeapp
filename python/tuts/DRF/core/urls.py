@@ -20,7 +20,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("/", include("blog.urls"), name="blog"),
     path(
-        "api",
+        "api/",
         include(
             "blog_api.urls",
         ),

@@ -7,7 +7,7 @@ from .serializers import PostSerializer
 
 
 class PostList(generics.ListCreateAPIView):
-    queryset = Post.objects.all()
+    queryset = Post.postobjects.all()
     serializer_class = PostSerializer
 
 
